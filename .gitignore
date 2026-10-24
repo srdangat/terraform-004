@@ -11,7 +11,7 @@
 tfplan
 
 # Terraform variables (potential secrets)
-*.tfvars
+# *.tfvars
 *.tfvars.json
 
 # Terraform crash logs
