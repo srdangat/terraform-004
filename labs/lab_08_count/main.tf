@@ -125,13 +125,13 @@ resource "aws_network_acl" "nacl" {
 }
 
 resource "aws_network_acl_association" "public" {
-  count = length(var.public_subnet_cidr_blocks)
+  count          = length(var.public_subnet_cidr_blocks)
   subnet_id      = aws_subnet.public[count.index].id
   network_acl_id = aws_network_acl.nacl[0].id
 }
 
 resource "aws_network_acl_association" "private" {
-  count = length(var.private_subnet_cidr_blocks)
+  count          = length(var.private_subnet_cidr_blocks)
   subnet_id      = aws_subnet.private[count.index].id
   network_acl_id = aws_network_acl.nacl[1].id
 }

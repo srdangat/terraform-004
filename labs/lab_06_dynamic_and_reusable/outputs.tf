@@ -16,5 +16,5 @@ output "availability_zone" {
 output "account_info" {
   description = "AWS account information"
   value       = "${data.aws_caller_identity.current.account_id}-${data.aws_region.current.region}"
-  sensitive = true
+  sensitive   = true
 }
